@@ -4,7 +4,7 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 
 const prisma = new PrismaClient()
 
-export async function fetchPosts(
+export default async function fetchPosts(
   req: NextApiRequest,
   res: NextApiResponse<Post[]>
 ) {
