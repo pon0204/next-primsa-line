@@ -15,7 +15,7 @@ type Props = {
 const Home: VFC<Props> = ({ posts }) => {
   return (
     <div className="text-center pt-20">
-      <h2>posts</h2>
+      <h2>投稿一覧</h2>
       {posts.map((post: any) => (
         <>
           <p>{post.id}</p>
