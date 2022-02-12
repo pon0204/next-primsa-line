@@ -4,7 +4,7 @@ import {
   WebhookEvent,
   WebhookRequestBody,
 } from '@line/bot-sdk'
-import { PrismaClient, LineUser } from '@prisma/client'
+import { PrismaClient } from '@prisma/client'
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 const lineConfig = {
@@ -14,6 +14,7 @@ const lineConfig = {
 }
 
 const prisma = new PrismaClient()
+prisma.$connect()
 const lineClient = new LineClient(lineConfig)
 
 export default async function lineWebhook(
